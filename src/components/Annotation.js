@@ -3,12 +3,12 @@ import React from 'react';
 import { Sphere } from '@react-three/drei';
 
 const ANNOTATION = [
-  'shit1',
-  'shit2',
-  'shit3'
+  'Annotation1',
+  'Annotation2',
+  'Annotation3'
 ];
 
-const Annotation = ({ annotation, setAnnotation }) => {
+const Annotation = ({ annotation, setAnnotation, position }) => {
 
   // const data = useEffect(() => {
   //   fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -26,7 +26,7 @@ const Annotation = ({ annotation, setAnnotation }) => {
   };
 
   return (
-    <Sphere scale={[0.1, 0.1, 0.1]} position={[-0.2, 0.25, 1]} onClick={handleClick}>
+    <Sphere scale={[0.1, 0.1, 0.1]} position={position} onClick={handleClick}>
       <meshBasicMaterial attach="material" color="skyblue" />
     </Sphere>
   );

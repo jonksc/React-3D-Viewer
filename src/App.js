@@ -19,7 +19,7 @@ function App() {
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Leberzirrhose scale={[10, 10, 10]} position={[0, 0, 0]} />
-        <Annotation annotation={annotation} setAnnotation={setAnnotation} />
+        <Annotation annotation={annotation} setAnnotation={setAnnotation} position={[-0.1611891936372079, 0.2533683569426359, 1.0830214880712363]}/>
       </Canvas>
     </Suspense>
   );
