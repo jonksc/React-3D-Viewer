@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Sphere } from '@react-three/drei'
+import { useAnno } from '../AnnotationStore'
 
-const Annotation = () => {
+const Annotation = ({ annotation, setAnnotation }) => {
 
   const handleClick = () => {
-    // setShowAnno(!showAnno)
+    if (!annotation) setAnnotation('Annotation successfully set')
   }
 
   return (

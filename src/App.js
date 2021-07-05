@@ -7,8 +7,7 @@ import { useAnno } from './AnnotationStore'
 
 
 function App() {
-  const { annotation, setAnnotation } = useAnno()
-  console.log(annotation);
+  const { annotation, setAnnotation } = useAnno();
 
   return (
     <Suspense fallback='Loading'>
@@ -20,7 +19,7 @@ function App() {
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Leberzirrhose scale={[10, 10, 10]} position={[0, 0, 0]} />
-        <Annotation />
+        <Annotation annotation={annotation} setAnnotation={setAnnotation} />
       </Canvas>
     </Suspense>
   );

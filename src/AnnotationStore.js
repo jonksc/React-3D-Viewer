@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 const AnnotationContext = React.createContext()
 
 export const AnnotationContextProvider = ({children}) => {
-  const [annotation, setAnnotation] = useState('')
+  const [annotation, setAnnotation] = useState('');
 
   // useEffect(() => {
   //   fetch('https://jsonplaceholder.typicode.com/todos/1')
