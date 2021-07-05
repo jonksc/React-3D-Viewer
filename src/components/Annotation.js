@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
-import { Sphere } from '@react-three/drei'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { Sphere } from '@react-three/drei';
 
 const ANNOTATION = [
   'shit1',
   'shit2',
   'shit3'
-]
+];
 
 const Annotation = ({ annotation, setAnnotation }) => {
 
@@ -19,16 +20,16 @@ const Annotation = ({ annotation, setAnnotation }) => {
 
   const handleClick = () => {
     if (!annotation) {
-      return setAnnotation(ANNOTATION[1])
+      return setAnnotation(ANNOTATION[1]);
     }
-    setAnnotation('')
-  }
+    setAnnotation('');
+  };
 
   return (
     <Sphere scale={[0.1, 0.1, 0.1]} position={[-0.2, 0.25, 1]} onClick={handleClick}>
       <meshBasicMaterial attach="material" color="skyblue" />
     </Sphere>
-  )
-}
+  );
+};
 
-export default Annotation
+export default Annotation;
