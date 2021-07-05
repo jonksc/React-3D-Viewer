@@ -1,22 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 const AnnotationContext = React.createContext()
 
 export const AnnotationContextProvider = ({children}) => {
   const [annotation, setAnnotation] = useState('');
 
-  // useEffect(() => {
-  //   fetch('https://jsonplaceholder.typicode.com/todos/1')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data.title)
-  //       setAnnotation(data.title)
-  //     })
 
-  //     return () => {
-  //       setAnnotation('')
-  //     }
-  // }, [])
 
   const value = {
     annotation,

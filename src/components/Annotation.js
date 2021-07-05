@@ -1,11 +1,27 @@
 import React, { useEffect } from 'react'
 import { Sphere } from '@react-three/drei'
-import { useAnno } from '../AnnotationStore'
+
+const ANNOTATION = [
+  'shit1',
+  'shit2',
+  'shit3'
+]
 
 const Annotation = ({ annotation, setAnnotation }) => {
 
+  // const data = useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/todos/1')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       return data
+  //     })
+  // }, [])
+
   const handleClick = () => {
-    if (!annotation) setAnnotation('Annotation successfully set')
+    if (!annotation) {
+      return setAnnotation(ANNOTATION[1])
+    }
+    setAnnotation('')
   }
 
   return (
