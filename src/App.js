@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Leberzirrhose from './components/Leberzirrhose';
+import Duck from './components/Duck'
+import { OrbitControls } from '@react-three/drei'
 
 function App() {
   return (
-  <Canvas>
-    <ambientLight intensity={0.5} />
-    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-    <pointLight position={[-10, -10, -10]} />
-    <Leberzirrhose position={[0, 0, 3]} />
-  </Canvas>
+    <Suspense fallback='null'>
+      <Canvas>
+      <OrbitControls />
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Leberzirrhose position={[0, 0, 4]} />
+      <Duck position={[0, 0, 0]} />
+      </Canvas>
+    </Suspense>
   );
 }
 

@@ -17,7 +17,7 @@ export default function Leberzirrhose(props) {
         fov={28.84}
         position={[0.57, 0.19, 0.08]}
         rotation={[-1.21, 1.22, 1.18]}
-        scale={[1, 1, 1]}
+        scale={[10, 10, 10]}
       />
       <mesh geometry={nodes.Leberzirrhose.geometry} material={materials.material_0} position={[0, 0.03, 0]} />
     </group>
