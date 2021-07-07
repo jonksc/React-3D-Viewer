@@ -17,7 +17,7 @@ const Annotation = ({ position, setShow }) => {
   };
 
   return (
-    <Sphere scale={[0.1, 0.1, 0.1]} position={position} onClick={handleClick}>
+    <Sphere scale={[0.07, 0.07, 0.07]} position={position} onClick={handleClick}>
       <meshBasicMaterial attach="material" color="skyblue" />
     </Sphere>
   );

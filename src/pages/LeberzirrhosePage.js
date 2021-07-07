@@ -28,7 +28,8 @@ const LeberzirrhosePage = () => {
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Leberzirrhose scale={[10, 10, 10]} position={[0, 0, 0]} />
-        <Annotation setShow={setShow} annotation={annotation} setAnnotation={setAnnotation} position={[-0.1611891936372079, 0.2533683569426359, 1.0830214880712363]}/>
+        <Annotation setShow={setShow} annotation={annotation} setAnnotation={setAnnotation} position={[-0.09497127741027789,0.20808860582452154,1.003644728953606]}/>
+        <Annotation setShow={setShow} annotation={annotation} setAnnotation={setAnnotation} position={[0.8500449910484997,0.1766648835250207,0.06577177785024313]}/>
       </Canvas>
     </Suspense>
   );
