@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { LinkContainer as LC } from 'react-router-bootstrap';
 
 const Navibar = () => {
@@ -14,10 +14,6 @@ const Navibar = () => {
             <Nav.Link href="/">Leberzirrhose</Nav.Link>
           </LC>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
       </Navbar>
     </>
   );

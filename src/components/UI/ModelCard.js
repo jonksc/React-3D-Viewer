@@ -5,7 +5,7 @@ import { LinkContainer as LC } from 'react-router-bootstrap';
 
 const ModelCard = ({ title, desc, link, img }) => {
   return (
-    <Card style={{ width: '25rem' }}>
+    <Card className='mb-4' style={{ width: '25rem' }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
@@ -13,7 +13,7 @@ const ModelCard = ({ title, desc, link, img }) => {
           {desc}
         </Card.Text>
         <LC to={link}>
-          <Button variant="primary">3D Model</Button>
+          <Button variant="secondary">3D Model</Button>
         </LC>
       </Card.Body>
     </Card>
