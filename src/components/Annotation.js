@@ -8,7 +8,7 @@ const ANNOTATION = [
   'Annotation3'
 ];
 
-const Annotation = ({ annotation, setAnnotation, position }) => {
+const Annotation = ({ setAnnotation, position, setShow }) => {
 
   // const data = useEffect(() => {
   //   fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -19,10 +19,8 @@ const Annotation = ({ annotation, setAnnotation, position }) => {
   // }, [])
 
   const handleClick = () => {
-    if (!annotation) {
-      return setAnnotation(ANNOTATION[1]);
-    }
-    setAnnotation('');
+    setAnnotation(ANNOTATION[0]);
+    setShow(true);
   };
 
   return (
