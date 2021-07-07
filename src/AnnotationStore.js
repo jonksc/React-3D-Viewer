@@ -6,8 +6,6 @@ const AnnotationContext = React.createContext();
 export const AnnotationContextProvider = ({ children }) => {
   const [annotation, setAnnotation] = useState('');
 
-
-
   const value = {
     annotation,
     setAnnotation
@@ -21,5 +19,3 @@ export const AnnotationContextProvider = ({ children }) => {
 };
 
 export const useAnno = () => React.useContext(AnnotationContext);
-
-

@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Leberzirrhose from '../components/models/Leberzirrhose';
@@ -10,10 +10,19 @@ import AnnoModal from '../components/UI/AnnoModal';
 const LeberzirrhosePage = () => {
   const [show, setShow] = useState(false);
   const { annotation, setAnnotation } = useAnno();
+
+  const ANNOTATION = 'Die Leberzirrhose, veraltet Lebercirrhose, ist das Endstadium chronischer Leberkrankheiten.';
+
+  useEffect(() => {
+    setAnnotation(ANNOTATION);
+  }, []);
   
   return (
     <Suspense fallback={<Spinner />}>
-      <AnnoModal show={show} handleClose={() => setShow(false)} />
+      <AnnoModal 
+        annotation={annotation} 
+        show={show} 
+        handleClose={() => setShow(false)} />
       <Canvas>
         <OrbitControls />
         <ambientLight />

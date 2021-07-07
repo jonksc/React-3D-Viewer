@@ -2,13 +2,7 @@
 import React from 'react';
 import { Sphere } from '@react-three/drei';
 
-const ANNOTATION = [
-  'Annotation1',
-  'Annotation2',
-  'Annotation3'
-];
-
-const Annotation = ({ setAnnotation, position, setShow }) => {
+const Annotation = ({ position, setShow }) => {
 
   // const data = useEffect(() => {
   //   fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -19,7 +13,6 @@ const Annotation = ({ setAnnotation, position, setShow }) => {
   // }, [])
 
   const handleClick = () => {
-    setAnnotation(ANNOTATION[0]);
     setShow(true);
   };
 

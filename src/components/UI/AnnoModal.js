@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import { useAnno } from '../../AnnotationStore';
 
-const AnnoModal = ({ show, handleClose }) => {
-  const { annotation } = useAnno();
+const AnnoModal = ({ show, handleClose, annotation }) => {
 
   return (
     <>
