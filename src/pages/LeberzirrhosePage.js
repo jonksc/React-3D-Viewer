@@ -11,7 +11,7 @@ const LeberzirrhosePage = () => {
   const [show, setShow] = useState(false);
   const { annotation, setAnnotation } = useAnno();
 
-  const ANNOTATION = 'Die Leberzirrhose, veraltet Lebercirrhose, ist das Endstadium chronischer Leberkrankheiten.';
+  const ANNOTATION = 'Die Leberzirrhose, veraltet Lebercirrhose, ist das Endstadium chronischer Leberkrankheiten. Dieses Stadium gilt als irreversibel, auch wenn einzelne Berichte über Heilungen existieren. Typischerweise entwickelt sich eine Zirrhose über Jahre bis Jahrzehnte, seltener sind schnellere Verläufe von unter einem Jahr. Fast alle chronischen Leberkrankheiten führen im Endstadium zu einer Leberzirrhose. In Europa sind Alkoholmissbrauch, Nicht-alkoholische Fettleber und chronische Virushepatitis die häufigsten Ursachen.';
 
   useEffect(() => {
     setAnnotation(ANNOTATION);

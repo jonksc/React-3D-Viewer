@@ -8,9 +8,9 @@ const AnnoModal = ({ show, handleClose, annotation }) => {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{annotation}</Modal.Title>
+          <Modal.Title>Leberzirrhose</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you&apos;re reading this text in a modal!</Modal.Body>
+        <Modal.Body>{annotation}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
