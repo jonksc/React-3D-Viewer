@@ -1,27 +1,19 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import Leberzirrhose from './components/Leberzirrhose';
-import Annotation from './components/Annotation';
-import { useAnno } from './AnnotationStore';
-
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import LeberzirrhosePage from './pages/LeberzirrhosePage';
+import MainPage from './pages/MainPage';
 
 function App() {
-  const { annotation, setAnnotation } = useAnno();
 
   return (
-    <Suspense fallback='Loading'>
-      <div className='annotation'>
-        {annotation}
-      </div>
-      <Canvas>
-        <OrbitControls />
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Leberzirrhose scale={[10, 10, 10]} position={[0, 0, 0]} />
-        <Annotation annotation={annotation} setAnnotation={setAnnotation} position={[-0.1611891936372079, 0.2533683569426359, 1.0830214880712363]}/>
-      </Canvas>
-    </Suspense>
+    <Switch>
+      <Route path='/' exact>
+        <MainPage />
+      </Route>
+      <Route path='/leberzirrhose'>
+        <LeberzirrhosePage />
+      </Route>
+    </Switch>
   );
 }
 
