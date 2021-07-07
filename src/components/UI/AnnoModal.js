@@ -6,7 +6,7 @@ const AnnoModal = ({ show, handleClose, annotation }) => {
 
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
+      <Modal size="lg" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Leberzirrhose</Modal.Title>
         </Modal.Header>
