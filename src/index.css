@@ -16,3 +16,8 @@ body {
 .annotation {
   padding: 10px;
 }
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+}

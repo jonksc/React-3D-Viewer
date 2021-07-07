@@ -2,15 +2,16 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Leberzirrhose from '../components/models/Leberzirrhose';
-import Annotation from '../components/UI/Annotation';
+import Annotation from '../components/Annotation';
 import { useAnno } from '../AnnotationStore';
+import Spinner from '../components/UI/Spinner';
 
 const LeberzirrhosePage = () => {
 
   const { annotation, setAnnotation } = useAnno();
   
   return (
-    <Suspense fallback='Loading'>
+    <Suspense fallback={<Spinner />}>
       <div className='annotation'>
         {annotation}
       </div>
