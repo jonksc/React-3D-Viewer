@@ -1,6 +1,7 @@
 import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+
 import Leberzirrhose from '../components/models/Leberzirrhose';
 import Annotation from '../components/Annotation';
 import { useAnno } from '../AnnotationStore';
