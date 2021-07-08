@@ -9,10 +9,18 @@ export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF('/glb/Leberzirrhose.glb');
 
+  const copyPosition = async (e) => {
+    // eslint-disable-next-line no-undef
+    process.env.NODE_ENV === 'development' && await navigator.clipboard.writeText(JSON.stringify(Object.values(e.intersections[0].point)));
+  };
+
   return (
     <group ref={group} {...props} dispose={null}>
-      {/* eslint-disable-next-line no-undef */}
-      <mesh onClick={async (e) => process.env.NODE_ENV === 'development' && await navigator.clipboard.writeText(JSON.stringify(Object.values(e.intersections[0].point)))} geometry={nodes.Leberzirrhose.geometry} material={materials.material_0} position={[0, 0.03, 0]} />
+      <mesh 
+        onClick={copyPosition} 
+        geometry={nodes.Leberzirrhose.geometry} 
+        material={materials.material_0} 
+        position={[0, 0.03, 0]} />
     </group>
   );
 }
