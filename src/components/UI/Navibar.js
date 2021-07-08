@@ -7,11 +7,11 @@ const Navibar = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <LC to='/'>
-          <Navbar.Brand href="#home">3D Model</Navbar.Brand>
+          <Navbar.Brand href="#home">3D Modell</Navbar.Brand>
         </LC>
         <Nav className="mr-auto">
           <LC to='/leberzirrhose'>
-            <Nav.Link href="/">Leberzirrhose</Nav.Link>
+            <Nav.Link href="/">Leberzirrhose 3D</Nav.Link>
           </LC>
         </Nav>
       </Navbar>

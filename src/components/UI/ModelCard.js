@@ -13,7 +13,7 @@ const ModelCard = ({ title, desc, link, img }) => {
           {desc}
         </Card.Text>
         <LC to={link}>
-          <Button size='block' variant="info">3D Model zeigen</Button>
+          <Button size='block' variant="info">3D Modell zeigen</Button>
         </LC>
       </Card.Body>
     </Card>
